@@ -112,3 +112,19 @@ cd recognition
 # example 
 python train.py --model 'iresnet-34' --head 'arcface' --aux 'unpg' --data 'data/kface.yaml' --hyp 'data/hyp.yaml' --name 'example' --device 0,1
 ```
+
+## License
+
+The **source code** in this repository is released under the [Apache License 2.0](LICENSE).
+
+The Apache License 2.0 does **not** apply to any model weights, including:
+
+- Pretrained UNPG models (e.g., `face.r100.cos.unpg.wisk1.5.pt`, `kface.r34.arc.unpg.wisk1.0.pt`).
+  These were trained on MS1MV2 (distributed by [InsightFace](https://github.com/deepinsight/insightface))
+  and K-FACE, whose terms permit **non-commercial research use only**.
+  Accordingly, these weights are provided for non-commercial research purposes only.
+- `detection/retinaface/weights/mobilenet0.25_Final.pth`, a third-party model included for convenience.
+  It is subject to its original license and training-data terms, not this repository's license.
+
+If you wish to use the models commercially, you must obtain the appropriate permissions
+from the respective dataset and model rights holders.
